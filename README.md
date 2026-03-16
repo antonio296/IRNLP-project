@@ -1,25 +1,98 @@
-# Progetto IRNLP
+# IRNLP Project
 
-Questo progetto è dedicato all'analisi delle tecniche di Natural Language Processing (NLP) tramite l'uso di metodi e algoritmi avanzati. Di seguito sono elencati i quaderni di lavoro (notebooks) inclusi nel progetto e le loro rispettive funzioni:
+Un progetto completo di **Natural Language Processing (NLP)** che esplora diverse tecniche di elaborazione del linguaggio naturale, dall'analisi semantica alla generazione di testo con modelli di intelligenza artificiale su temi legati alla salute mentale.
 
-## Notebooks:
+## Descrizione del Progetto
 
-1. **preprocessing.ipynb**: Questo quaderno contiene le tecniche di preprocessamento dei dati, inclusa la rimozione di stopword, la lemmatizzazione e la tokenizzazione.
+Questo progetto implementa un'analisi comprensiva di NLP con le seguenti componenti principali:
 
-2. **eda.ipynb**: In questo quaderno viene eseguita un'analisi esplorativa dei dati (EDA) per comprendere meglio le caratteristiche del dataset e identificare modelli o anomalie.
+- **Clustering Semantico**: Raggruppamento di testi basato su similarità semantica
+- **Sentiment Analysis**: Analisi del sentimento e delle emozioni nei testi
+- **Classificazione di Risposte**: Categorizzazione automatica di risposte testuali
+- **Generazione di Risposte**: Creazione di risposte intelligenti utilizzando modelli avanzati
+- **Fine-tuning di Modelli**: Adattamento di modelli pre-allenati per compiti specifici
 
-3. **sentiment_analysis.ipynb**: Qui viene implementato un modello di analisi del sentimento per valutare le opinioni espresse in un dataset di recensioni.
+## Struttura della Repository
 
-4. **topic_modeling.ipynb**: In questo quaderno vengono utilizzati algoritmi di modellazione degli argomenti per identificare i temi principali all'interno del testo.
+### Notebook Principali
 
-5. **neural_networks.ipynb**: Questo quaderno esplora l'implementazione delle reti neurali per risolvere problemi di classificazione del testo, con un focus su architetture come LSTM e CNN.
+#### 1. **`1_nlp-clustering-semantico-sentiment-analysis.ipynb`**
+Primo notebook che implementa:
+- Analisi semantica di testi
+- Clustering basato su similarità coseno
+- Sentiment analysis per identificare emozioni positive/negative/neutre
+- Visualizzazioni dei risultati
 
-6. **results_analysis.ipynb**: Qui vengono analizzati e visualizzati i risultati ottenuti dai modelli, fornendo una comprensione dei loro successi e delle aree di miglioramento.
+#### 2. **`2_nlp-classificazione-risposte.ipynb`**
+Notebook dedicato alla classificazione:
+- Preprocessing e tokenizzazione dei dati
+- Training di un modello classificatore
+- Valutazione delle performance
+- Metriche di classificazione (accuracy, precision, recall, F1-score)
 
-## Requisiti
+#### 3. **`3_nlp-generazione-risposte-senza-finetuing.ipynb`**
+Generazione di testo con modelli pre-allenati:
+- Utilizzo di modelli base per la generazione di risposte
+- Test senza fine-tuning
+- Confronto di diverse strategie di generazione
 
-Assicurati di avere installato i seguenti pacchetti: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `nltk`, `tensorflow`, `gensim`.
+### Notebook di Fine-tuning
 
-## Contributi
+#### 4. **`gemma3-finetuning.ipynb`**
+Fine-tuning del modello Gemma3:
+- Preparazione del dataset
+- Configurazione dei parametri di training
+- Fine-tuning per compiti specifici
+- Salvataggio del modello adattato
 
-Con i tuoi feedback e contributi, questo progetto può crescere e migliorare. Non esitare a fare una pull request!
+#### 5. **`llama-finetuning.ipynb`**
+Fine-tuning del modello Llama:
+- Setup dell'ambiente per Llama
+- Training personalizzato
+- Ottimizzazione dei iperparametri
+- Evaluazione dei risultati
+
+#### 6. **`qwen-finetuning.ipynb`**
+Fine-tuning del modello Qwen:
+- Implementazione avanzata di fine-tuning
+- Analisi dettagliata dei risultati
+- Tecniche di ottimizzazione
+- Esperimenti comparativi
+
+### Analisi dei Risultati
+
+#### 7. **`risposte_modelli_post_finetuning.ipynb`**
+Analisi comprensiva delle risposte generate:
+- Confronto tra modelli fine-tuned
+- Valutazione qualitativa delle risposte
+- Metriche di performance
+- Visualizzazioni comparative
+
+## Tecnologie Utilizzate
+- **Librerie NLP**:
+  - Hugging Face Transformers
+  - NLTK
+  - spaCy
+  - scikit-learn
+- **Modelli**:
+  - Gemma3
+  - Llama
+  - Qwen
+- **Visualizzazione**: Matplotlib, Seaborn, Plotly
+
+## Come eseguire l'analisi
+Esegui i notebook in ordine:
+
+- Inizia con il notebook 1 per l'analisi semantica
+- Prosegui con il notebook 2 per la classificazione
+- Continua con il notebook 3 per la generazione base
+- Seleziona uno o più notebook di fine-tuning
+- Consulta l'ultimo notebook per l'analisi comparativa
+
+## Configurazione e Iperparametri
+I parametri principali possono essere configurati direttamente nei notebook:
+- Learning rate
+- Batch size
+- Numero di epoch
+- Temperatura di generazione
+- Max token length
